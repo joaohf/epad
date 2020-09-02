@@ -2,12 +2,13 @@ defmodule Epad.MixProject do
   use Mix.Project
 
   @version "0.0.1"
-  @source_url "https://github.com/nerves-project/nerves_runtime"
+  @source_url "https://github.com/joaohf/epad"
 
   def project do
     [
       app: :epad,
       version: @version,
+      description: description(),
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:elixir_make, :phoenix, :gettext] ++ Mix.compilers(),
@@ -21,12 +22,13 @@ defmodule Epad.MixProject do
             epad: :permanent
           ],
           steps: [
-            :assemble, :tar
+            :assemble,
+            :tar
           ],
           include_erts: false
         ]
       ],
-      source_url: "https://github.com/joaohf/epad",
+      source_url: @source_url,
       homepage_url: "https://github.com/joaohf/epad",
       docs: [
         main: "readme",
@@ -80,10 +82,14 @@ defmodule Epad.MixProject do
     ]
   end
 
+  defp description() do
+    "epad is a virtual gamepad to play video game."
+  end
+
   defp package do
     [
-      files: ["CHANGELOG.md", "lib", "LICENSE", "mix.exs", "README.md", "src/*.[ch]", "Makefile"],
-      licenses: ["Apache-2.0"],
+      files: ["lib", "assets", "LICENSE", "mix.exs", "README.md", "src/*.[ch]", "Makefile"],
+      licenses: ["MIT"],
       links: %{"Github" => @source_url}
     ]
   end
