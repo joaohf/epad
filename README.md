@@ -1,5 +1,7 @@
 # Epad
 
+[![CI](https://github.com/joaohf/epad/workflows/Elixir%20CI/badge.svg?branch=master)](https://github.com/joaohf/epad/actions?query=workflow%3A%22Elixir+CI%22)
+
 epad is a virtual controller design to work together with Linux User input devices.
 
 This project was based on two other similar projects:
