@@ -1,0 +1,57 @@
+<div class="loader">Loading...</div>
+
+<div id="settings-modal" class="modal-wrapper closed">
+    <div class="modal">
+        <div class="close"></div>
+        <form id="settings-form">
+            <h1>Settings</h1>
+            <hr />
+            <div class="form-row">
+                <label for="settings-layout">Keyboard layout</label>
+                <div class="nested">
+                    <select id="settings-layout" name="keyboardLayout">
+                        <!-- will be filled by js -->
+                    </select>
+                    <br />
+                    <small class="explain">
+                        This must be eqequal to the the keyboard layout set on the host.
+                    </small>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="settings-sticky">Sticky mod keys</label>
+                <input type="hidden" name="stickyModKeys" value="false" />
+                <div class="nested">
+                    <label class="switch">
+                        <input type="checkbox" value="true" id="settings-sticky" name="stickyModKeys" />
+                        <div class="slider round"></div>
+                    </label>
+                    <br />
+                    <small class="explain">
+                        This is recommended for single touch devices.
+                        It will keep modifier keys (e.g. ctrl) pressed
+                        until the next non-modifier key or the same modifier
+                        key is clicked again.
+                    </small>
+                </div>
+            </div>
+            <br />
+            <div class="credits">
+                <h4>Credits</h4>
+                <small class="explain">
+                    Favicon made by
+                    <a href="http://www.flaticon.com/authors/dave-gandy"
+                       title="Dave Gandy">Dave Gandy</a> from
+                    <a href="http://www.flaticon.com"
+                       title="Flaticon">www.flaticon.com</a> is licensed by
+                    <a href="http://creativecommons.org/licenses/by/3.0/"
+                       title="Creative Commons BY 3.0">CC 3.0 BY</a>.
+                </small>
+            </div>
+            <button>Save</button>
+        </form>
+    </div>
+
+</div>
+
+<div id="keyboard-container"></div>

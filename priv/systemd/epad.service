@@ -1,0 +1,22 @@
+[Unit]
+Description=epad service
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/epad
+ExecStart=/opt/epad/bin/epad start
+ExecStop=/opt/epad/bin/epad stop
+Environment=LANG=en_GB.UTF-8
+Environment=MIX_ENV=prod
+
+Environment=PORT=4000
+LimitNOFILE=65535
+UMask=0027
+SyslogIdentifier=epad
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

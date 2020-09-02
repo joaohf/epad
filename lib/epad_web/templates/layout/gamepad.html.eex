@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mobile gamepad</title>
+  <link rel="icon" type="image/png" href="/images/favicon_joystick_32.ico" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="128x128" href="/images/icon_joystick_128x128.png">
+  <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/gamepad.css") %>"/>
+  <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/gamepad.js") %>"></script>
+</head>
+
+<body>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+  <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+  <%= @inner_content %>
+</body>
+</html>
