@@ -36,9 +36,9 @@ sudo rm -R otp_src_23.0/
 ```
 * The second step is to download the epad release for raspberrypie4:
 ```
-curl -o /tmp/epad-0.1.0-raspberrypi4.tar.gz
+curl -Lo /tmp/epad-0.0.1-raspberrypi4.tar.gz https://github.com/joaohf/epad/releases/download/0.0.1/epad-0.0.1-raspberrypi4.tar.gz
 sudo mkdir /opt/epad
-sudo tar zxf /opt/epad-0.1.0-raspberrypi4.tar.gz -C /opt/epad
+sudo tar zxf /opt/epad-0.0.1-raspberrypi4.tar.gz -C /opt/epad
 ```
 * After that, copy the epad config for retropie:
 ```
